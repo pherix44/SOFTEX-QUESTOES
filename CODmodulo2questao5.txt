@@ -1,0 +1,35 @@
+def calculadora():
+    
+    print ("Selecione a operação: 1,2,3 ou 4")
+    print("0. Sair")
+    print("1. Somar")
+    print("2. Subtrair")
+    print("3. Multiplicação")
+    print("4. Divisão ")
+    
+    opçao = int(input("Selecione a operação: 1,2,3 ou 4: "))
+    
+    if (opçao==0):
+        exit()
+    elif(opçao>4):
+        print("Essa opção não existe")
+        return
+        
+    num1 = float(input("Selecione o Primeiro número: "))
+    num2 = float(input("Selecione o Segundo número: "))
+ 
+    if(opçao==1):
+        print("Resultado Soma:", num1 + num2)
+    elif(opçao==2):
+        print("Resultado Subtração:", num1 - num2)
+    elif(opçao==3):
+        print("Resultado Multiplicação:", num1 * num2)
+    elif(opçao==4):
+        print("Resultado Divisão:", num1 / num2)
+    
+  
+repetir=1
+while(repetir):
+        
+    calculadora()
+        

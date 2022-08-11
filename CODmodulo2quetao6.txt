@@ -1,0 +1,17 @@
+def DadosUsuario():
+    
+    nome = str(input("Informe seu nome completo: "))
+    anonasc = int(input("Informe o seu ano de nascimento: "))
+   
+    if (anonasc < 1922): 
+        print("ERRO. VALOR INVÁLIDO")
+        return DadosUsuario()
+    elif (anonasc > 2021):
+        print("ERRO. VALOR INVÁLIDO")
+        return DadosUsuario()
+            
+    else:
+        idade = (2022 - anonasc)
+        print("O Usuário {0} completou {1} anos em 2022".format(nome,idade))
+        
+DadosUsuario()
