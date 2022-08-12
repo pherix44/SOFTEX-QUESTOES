@@ -1,0 +1,51 @@
+from enum import Enum
+#Desenvolva um código que simule uma eleição com três candidatos.
+
+class candidatos(Enum):
+    candidato_X = 889
+    candidato_Y = 847
+    candidato_Z = 515
+    branco = 0
+    
+votarNovamente = True
+votoscandidato_X = 0
+votoscandidato_Y = 0
+votoscandidato_Z = 0
+votosbranco = 0
+
+while (votarNovamente == True):
+    try:
+        print("Informe o numero do candidato que deseja votar: ")
+        voto = int(input())
+        
+        if (voto == candidatos.candidato_X.value):
+            print(f"Você votou em {candidatos.candidato_X.name}")
+            votoscandidato_X = votoscandidato_X + 1
+        elif (voto == candidatos.candidato_Y.value):
+            print(f"Você votou em {candidatos.candidato_Y.name}")
+            votoscandidato_Y = votoscandidato_Y + 1
+        elif (voto == candidatos.candidato_Z.value):
+            print(f"Você votou em {candidatos.candidato_Z.name}")
+            votoscandidato_Z = votoscandidato_Z + 1
+        else: 
+            print("Você votou nulo")
+            votosbranco = votosbranco + 1
+    except:
+        print("Você não digitou um número. Por favor, digite 'S' para votar novamente.")
+    
+    votarNovamente = input("Deseja votar novamente? (N - Não / S - Sim) ")
+    if (votarNovamente == "S" or votarNovamente == "s"):
+        votarNovamente = True
+    elif (votarNovamente == "N" or votarNovamente == "n"):
+        votarNovamente = False
+    
+if votoscandidato_X > votoscandidato_Y and votoscandidato_X > votoscandidato_Z and votoscandidato_X > votosbranco:
+    print("Candidato eleito: candidato_X")
+elif votoscandidato_Y > votoscandidato_X and votoscandidato_Y > votoscandidato_Z and votoscandidato_Y > votosbranco:
+    print("Candidato eleito: candidato_Y")
+elif votoscandidato_Z > votoscandidato_X and votoscandidato_Z > votoscandidato_Y and votoscandidato_Z > votosbranco:
+    print("Candidato eleito: candidato_Z")
+print(f"{candidatos.candidato_X.name}: {votoscandidato_X} votos")
+print(f"{candidatos.candidato_Y.name}: {votoscandidato_Y} votos")
+print(f"{candidatos.candidato_Z.name}: {votoscandidato_Z} votos")
+print(f"{candidatos.branco.name}: {votosbranco} votos")
