@@ -1,0 +1,27 @@
+class Funcionario:
+    def __init__(self, nome, idade, sexo, funcao):
+        self.nome = nome
+        self.idade = idade
+        self.genero = ["M", "F"]
+        if sexo in self.genero:
+            self.sexo = sexo
+        else:
+            raise Exception("Sexo Inválido!")
+        self.lista_funcao = ["Caixa", "Vendedor", "Estoquista"]
+        if funcao in self.lista_funcao:
+            self.funcao = funcao
+        else:
+            print("funçao Inválida")
+
+    def mudar_funcao(self, nova_funcao):
+        if nova_funcao in self.lista_funcao:
+            self.funcao = nova_funcao
+        else:
+            print("Função Inválida")
+
+funcionario = Funcionario("Carlos","58", "M", "Vendedor")
+print(funcionario.funcao)
+funcionario.mudar_funcao("Vendedor")
+print(funcionario.funcao)
+funcionario.mudar_funcao("Caixa")
+print(funcionario.funcao)
