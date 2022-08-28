@@ -1,0 +1,38 @@
+Materiais
+Macaco
+Atributos
+•	Cor
+•	Raça
+•	Tamanho
+Métodos
+•	Comer
+•	Coçar
+•	Escalar
+Moto
+Atributos
+•	Marca
+•	Combustível
+•	KMs rodados
+Métodos
+•	Mover
+•	Trocar marcha
+•	Dar seta
+Abstratos
+Reunião
+Atributos
+•	Duração
+•	Assunto
+•	Horário
+Métodos
+•	Apresentar conteúdo
+•	Discutir tema
+•	Finalizar Reunião
+Cadastro
+Atributos
+•	Nome
+•	Endereço
+•	E-mail
+Métodos
+•	Acessar cadastro	
+•	Preencher campos
+•	Finalizar cadastro
