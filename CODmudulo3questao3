@@ -1,0 +1,14 @@
+def sort(array):
+    for p in range(0, len(array)):
+         while p > 0:
+            
+             if array[ p - 1] > array[p]:
+                 array[p], array[p - 1] = array[p - 1], array[p]
+             p -=1
+         
+             
+                 
+array = sorted([17,15,13,7,5,1,21,31,19,23,33,43,31,27,25,35,29,39,45,47,49,55,13,59,65,63,61,23,37,3])
+copy_array = array[:]
+sort(array)
+print (array)
